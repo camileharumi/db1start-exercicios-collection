@@ -8,9 +8,10 @@ import org.junit.Test;
 
 import br.com.db1.colecoes.ExemploArray;
 import br.com.db1.colecoes.ExemploColecao;
+import br.com.db1.colecoes.ExemploHashSet;
 
-public class ColecoesTest {
-	private ExemploColecao colecao = new ExemploColecao();
+public class HashSetTest {
+	private ExemploHashSet colecao = new ExemploHashSet();
 	
 	@Before
 	public void popularLista() {
@@ -71,8 +72,8 @@ public class ColecoesTest {
 	}
 
 	@Test
-	public void exercicio6Test(){
-		colecao.getListaOrdenada();
+	public void exercicioTreeSetTest() {
+		colecao.getListaOrdenadaTreeSet();
 		colecao.percorrerList();
 	}
 
