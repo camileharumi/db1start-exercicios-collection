@@ -15,16 +15,16 @@ public class ExemploAula20Test {
 	
 	@Before
 	public void popularNumeros() {
-		exColString.adicionarNumerosList(15);
-		exColString.adicionarNumerosList(22);
-		exColString.adicionarNumerosList(36);
-		exColString.adicionarNumerosList(44);
-		exColString.adicionarNumerosList(58);
-		exColString.adicionarNumerosList(64);
-		exColString.adicionarNumerosList(73);
-		exColString.adicionarNumerosList(88);
-		exColString.adicionarNumerosList(94);
-		exColString.adicionarNumerosList(15);
+		exColString.adicionarNumerosList(1);
+		exColString.adicionarNumerosList(2);
+		exColString.adicionarNumerosList(3);
+		exColString.adicionarNumerosList(4);
+		exColString.adicionarNumerosList(5);
+		exColString.adicionarNumerosList(6);
+		exColString.adicionarNumerosList(7);
+		exColString.adicionarNumerosList(8);
+		exColString.adicionarNumerosList(9);
+		exColString.adicionarNumerosList(10);
 	}
 	
 	@Test
@@ -54,16 +54,49 @@ public class ExemploAula20Test {
 	@Test
 	public void removerTerceiroNumeroTest() {		
 		List<Integer> numeros = exColString.removerTerceiroNumero(3);
-		//Assert.assertTrue(exColString.getNumerosList().size() == 9);
+		Assert.assertTrue(exColString.getNumerosList().size() == 9);
 		System.out.println(numeros);
 	}
 	
-	/*@Test
+	@Test
 	public void apresentarMultiplosTresTest() {
 		
-		List<Integer> multiplosTres = exColString.apresentarMultiplosTres();
-		Assert.assertTrue(multiplosTres.contains(3));
+	}
+	
+	@Test
+	public void apresentarMultiplosDoisTest() {		
+		List<Integer> multiplosTres = exColString.apresentarMultiplosDois();
+		Assert.assertTrue(multiplosTres.contains(2));
+		Assert.assertTrue(multiplosTres.contains(4));
 		Assert.assertTrue(multiplosTres.contains(6));
-		Assert.assertTrue(multiplosTres.contains(9));
-	}*/
+		Assert.assertTrue(multiplosTres.contains(8));
+		Assert.assertTrue(multiplosTres.contains(10));
+	}
+	
+	@Test
+	public void copiarTextosTest() {
+		
+	}
+	
+	@Test
+	public void compararListsTest() {
+		
+	}
+	
+	@Test
+	public void compararSetsTest() {
+		
+	}
+	
+	@Test
+	public void exibirProdutosPorDescricaoTest() {
+		
+	}
+	
+	@Test
+	public void exibirProdutosPorPrecoTest() {
+		
+	}
+	
+	
 }

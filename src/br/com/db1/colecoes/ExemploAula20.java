@@ -40,31 +40,68 @@ public class ExemploAula20 {
 	}
 	
 	public List<Integer> removerTerceiroNumero(Integer index) {
-		/*numerosList.remove(index);
-		return numerosList;*/
-		
-		/*Integer tmp = 0;
+		Integer tmp = 0;
 		Integer numero = 0;
 		Iterator<Integer> lista = numerosList.iterator();
 		while(lista.hasNext()) {
 			if (tmp == index-1) {
 				numero = lista.next();
+				break;
 			}
+			//System.out.println(lista.next());
 			tmp++;
 		}
 		numerosList.remove(numero);
-		return numerosList;*/
+		return numerosList;
 	}
 	
-	public List<Integer> apresentarMultiplosTres() {
+	/*public List<Integer> apresentarMultiplosTres() {
 		List<Integer> multiplos = new ArrayList<>();
 		Iterator<Integer> it = numerosList.iterator();
+		int tmp = 0;
 		while(it.hasNext()) {
-			if(it.next() % 3 == 0) {
-				multiplos.add(it.next() - 1);
+			int valor = it.next();
+			if(valor % 2 == 0) {
+				multiplos.add(valor - 1);
+				tmp++;
 			}
 		}
 		System.out.println(multiplos);
 		return multiplos;
+	}*/
+	
+	public List<Integer> apresentarMultiplosDois() {
+		List<Integer> multiplos = new ArrayList<>();
+		Iterator<Integer> it = numerosList.iterator();
+		int tmp = 0;
+		while(it.hasNext()) {
+			int valor = it.next();
+			if(valor % 2 == 0) {
+				multiplos.add(valor);
+				tmp++;
+			}
+		}
+		System.out.println(multiplos);
+		return multiplos;
+	}
+	
+	public List<String> copiarTextos() {
+		
+	}
+	
+	public List<Integer> compararLists() {
+		
+	}
+	
+	public Set<Integer> compararSets() {
+		
+	}
+	
+	public List<Produtos> exibirProdutosPorDescricao() {
+		
+	}
+	
+	public List<Produtos> exibirProdutosPorPreco() {
+		
 	}
 }
