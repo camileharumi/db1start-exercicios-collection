@@ -1,6 +1,8 @@
 package br.com.db1.colecoes.test;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -73,8 +75,11 @@ public class HashSetTest {
 
 	@Test
 	public void exercicioTreeSetTest() {
-		colecao.getListaOrdenadaTreeSet();
-		colecao.percorrerList();
+		Set<String> ordenados = colecao.getListaOrdenadaTreeSet();
+		Iterator it = ordenados.iterator();
+		while (it.hasNext()) {
+			System.out.println(it.next());
+		}
 	}
 
 }

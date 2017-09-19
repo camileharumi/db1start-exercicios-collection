@@ -33,11 +33,9 @@ public class ExemploHashSet {
 		return nomesDb1Start.size();
 	}
 
-	public TreeSet<String> getListaOrdenadaTreeSet() {
-		TreeSet<String> listaOrdenada = new TreeSet<>();
+	public Set<String> getListaOrdenadaTreeSet() {
+		Set<String> listaOrdenada = new TreeSet<>();
 		listaOrdenada.addAll(nomesDb1Start);
-		
-		//Collections.sort(nomesDb1Start);
 		return listaOrdenada;
 	}
 }
