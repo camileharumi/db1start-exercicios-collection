@@ -4,4 +4,8 @@
 
 Parte 1 - Introdução Array simples  
 Parte 2 - Coleção ArrayList  
-Parte 3 - Coleção HashSet
+Parte 3 - Coleção HashSet  
+
+### Exercícios 19/09/17
+
+Parte 4 - Exercícios HashSet
