@@ -31,37 +31,25 @@ public class ExemploAula20Test {
 	
 	@Test
 	public void getConsoantesTest() {
-		Set<Character> consoantes = exColString.getConsoantes("Camile");
+		Set<String> consoantes = exColString.getConsoantes("Camile");
 		Assert.assertTrue(consoantes.size() == 3);
-		Assert.assertTrue(consoantes.contains('C'));
-		Assert.assertFalse(consoantes.contains('a'));
-		Assert.assertTrue(consoantes.contains('m'));
-		Assert.assertFalse(consoantes.contains('i'));
-		Assert.assertTrue(consoantes.contains('l'));
-		Assert.assertFalse(consoantes.contains('e'));
+		Assert.assertTrue(consoantes.contains("c"));
+		Assert.assertFalse(consoantes.contains("a"));
+		Assert.assertTrue(consoantes.contains("m"));
+		Assert.assertFalse(consoantes.contains("i"));
+		Assert.assertTrue(consoantes.contains("l"));
+		Assert.assertFalse(consoantes.contains("e"));
 	}
 	
 	@Test
-	public void getVogais2Test(){
-		Set<String> vogais = exColString.getVogais2("Fusca");
+	public void getVogaisTest(){
+		Set<String> vogais = exColString.getVogais("Fusca");
 		Assert.assertTrue(vogais.size() == 2);
 		Assert.assertFalse(vogais.contains("F"));
 		Assert.assertTrue(vogais.contains("u"));
 		Assert.assertFalse(vogais.contains("s"));
 		Assert.assertFalse(vogais.contains("c"));
 		Assert.assertTrue(vogais.contains("a"));
-	}
-	
-	@Test
-	public void getVogaisTest() {
-		Set<Character> consoantes = exColString.getVogais("Camile");
-		Assert.assertTrue(consoantes.size() == 3);
-		Assert.assertFalse(consoantes.contains('C'));
-		Assert.assertTrue(consoantes.contains('a'));
-		Assert.assertFalse(consoantes.contains('m'));
-		Assert.assertTrue(consoantes.contains('i'));
-		Assert.assertFalse(consoantes.contains('l'));
-		Assert.assertTrue(consoantes.contains('e'));
 	}
 	
 	@Test

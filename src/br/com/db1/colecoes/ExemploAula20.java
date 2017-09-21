@@ -18,30 +18,7 @@ public class ExemploAula20 {
 		numerosList.add(numero);
 	}
 	
-	public Set<Character> getConsoantes(String palavra) {		
-		Set<Character> consoantes = new HashSet<Character>();
-		for(char c : palavra.toCharArray()) { //podia ter usado substring ao invés de char
-			if (c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u') { //se o usuário inserir números o sistema vai detectar como consoantes, sugiro usar uma colecao e adicionar a ela as consoantes
-			   consoantes.add(c);// e depois usar .contents para testar se é consoante. OBS: a principio eu tinha feito igual vc fez :D e o fusca sugeriu essas mmudanças
-			}
-		}		
-		System.out.println(consoantes);
-		return consoantes;	
-	}
-	
-	public Set<Character> getVogais(String palavra) {		
-		Set<Character> vogais = new HashSet<Character>();
-		for(char c : palavra.toCharArray()) {
-			if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-			   vogais.add(c);
-			}
-		}		
-		System.out.println(vogais);
-		return vogais;
-	}
-	
-	public Set<String> getVogais2(String nomeParametro) {
-		
+	public Set<String> getVogais(String nomeParametro) {		
 		vogais.add("a");
 		vogais.add("e");
 		vogais.add("i");
@@ -61,6 +38,26 @@ public class ExemploAula20 {
 		return vogaisEncontradas;
 	}
 	
+	public Set<String> getConsoantes(String nomeParametro) {		
+		vogais.add("a");
+		vogais.add("e");
+		vogais.add("i");
+		vogais.add("o");
+		vogais.add("u");
+		
+		nomeParametro = nomeParametro.toLowerCase();
+		Set<String> consoantesEncontradas = new HashSet<>();
+
+		for (Integer x =0 ; x < nomeParametro.length(); x++){
+			String letra = nomeParametro.substring(x, x+1);
+			if (!vogais.contains(letra)){
+				consoantesEncontradas.add(letra);
+			}
+		}
+		System.out.println(consoantesEncontradas);
+		return consoantesEncontradas;
+	}
+	
 	public List<Integer> getNumerosList() {
 		return numerosList;
 	}
@@ -74,7 +71,6 @@ public class ExemploAula20 {
 				numero = lista.next();
 				break;
 			}
-			//System.out.println(lista.next());
 			tmp++;
 		}
 		numerosList.remove(numero);
@@ -121,8 +117,7 @@ public class ExemploAula20 {
 			return true;
 		} else return false;
 	}
-	//Mano, esses exercícios de comparação de listas eu comparei elemento por elemento hahahaha
-	//genial seu código, parabéns!
+
 	public Boolean compararSets(Set<Integer> set1, Set<Integer> set2) {
 		if(set1.containsAll(set2)) {
 			return true;
